@@ -22,7 +22,7 @@ class ClockTests: XCTestCase
             
             runCounter += 1
         
-            if runCounter > 3 { expectation.fulfill() }
+            if runCounter == 3 { expectation.fulfill() }
         }
 
         XCTAssertEqual(runCounter, 0)
