@@ -10,19 +10,19 @@ import Foundation
 
 public extension FileManager
 {
-    func copy(resourceNamed name: String, ofType: String, inBundle bundle: Bundle = Bundle.main, toFolder folderPath: String) throws -> Bool
+    func copy(resourceNamed name: String, ofType: String, inBundle bundle: Bundle = Bundle.main, toFolder folderPath: String) throws -> String?
     {
         //            let pathToDocumentsFolder = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last!
         
         let pathToFile = folderPath.appending("/\(name).\(ofType)")
         
-        guard !FileManager.default.fileExists(atPath: pathToFile) else { return false }
+        guard !FileManager.default.fileExists(atPath: pathToFile) else { return nil }
         
-        guard let pathToBundledResource = bundle.path(forResource: name, ofType: ofType) else { return false }
+        guard let pathToBundledResource = bundle.path(forResource: name, ofType: ofType) else { return nil }
         
         try FileManager.default.copyItem(atPath: pathToBundledResource, toPath: pathToFile)
         
-        return true
+        return pathToFile
     }
     
     func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _ response: URLResponse?, _ error: Error? ) -> ())
@@ -33,19 +33,19 @@ public extension FileManager
             }.resume()
     }
     
-    class func documentsDirectoryURL() -> URL?
+    func documentsFolderURL() -> URL?
     {
-        guard let path = documentDirectoryPath() else { return nil }
+        guard let path = documentsFolderPath() else { return nil }
         
         return URL(fileURLWithPath: path, isDirectory: true)
     }
     
-    class func documentURLFor(_ fileName: String, fileExtension: String) -> URL?
+    func documentURL(forFile fileName: String, fileExtension: String) -> URL?
     {
-        return documentsDirectoryURL()?.appendingPathComponent(fileName).appendingPathExtension(fileExtension)
+        return documentsFolderURL()?.appendingPathComponent(fileName).appendingPathExtension(fileExtension)
     }
     
-    class func documentDirectoryPath() -> String?
+    func documentsFolderPath() -> String?
     {
         return NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last
     }
