@@ -166,6 +166,8 @@
 		8F38B7DB1DBE279E00D36455 /* GraphicsInterpolationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F38B7DA1DBE279E00D36455 /* GraphicsInterpolationTests.swift */; };
 		8F38B7DE1DBE375E00D36455 /* TypeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F38B7DD1DBE375E00D36455 /* TypeName.swift */; };
 		8F38B7E11DBE377500D36455 /* ReflectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F38B7E01DBE377500D36455 /* ReflectionTests.swift */; };
+		8F38B7F51DBF3A8600D36455 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F38B7F41DBF3A8600D36455 /* FileManager.swift */; };
+		8F38B7F71DBF3BCB00D36455 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F38B7F61DBF3BCB00D36455 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -341,6 +343,8 @@
 		8F38B7DA1DBE279E00D36455 /* GraphicsInterpolationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphicsInterpolationTests.swift; sourceTree = "<group>"; };
 		8F38B7DD1DBE375E00D36455 /* TypeName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeName.swift; sourceTree = "<group>"; };
 		8F38B7E01DBE377500D36455 /* ReflectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReflectionTests.swift; sourceTree = "<group>"; };
+		8F38B7F41DBF3A8600D36455 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		8F38B7F61DBF3BCB00D36455 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,6 +420,7 @@
 				8F38B6C01DBE025100D36455 /* UserDeafults */,
 				8F38B6421DBDFE1100D36455 /* SwiftPlus.h */,
 				8F38B6431DBDFE1100D36455 /* Info.plist */,
+				8F38B7F81DBF3E8300D36455 /* File */,
 			);
 			path = SwiftPlus;
 			sourceTree = "<group>";
@@ -770,6 +775,7 @@
 				8F38B7951DBE24C100D36455 /* UINavigationViewController.swift */,
 				8F38B7961DBE24C100D36455 /* Error.swift */,
 				8F38B7971DBE24C100D36455 /* UIBezierPath.swift */,
+				8F38B7F61DBF3BCB00D36455 /* UIImageView.swift */,
 			);
 			name = Interface;
 			sourceTree = "<group>";
@@ -800,6 +806,14 @@
 				8F38B7DD1DBE375E00D36455 /* TypeName.swift */,
 			);
 			name = Reflection;
+			sourceTree = "<group>";
+		};
+		8F38B7F81DBF3E8300D36455 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				8F38B7F41DBF3A8600D36455 /* FileManager.swift */,
+			);
+			name = File;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -980,6 +994,7 @@
 				8F38B6F71DBE092000D36455 /* Fuzzy.swift in Sources */,
 				8F38B6DC1DBE069C00D36455 /* Synchronized.swift in Sources */,
 				8F38B6871DBDFE6400D36455 /* Float+Random.swift in Sources */,
+				8F38B7F51DBF3A8600D36455 /* FileManager.swift in Sources */,
 				8F38B79D1DBE24C100D36455 /* ManagedCollectionViewController.swift in Sources */,
 				8F38B7CA1DBE271E00D36455 /* CGVector.swift in Sources */,
 				8F38B6F31DBE092000D36455 /* ArithmeticType.swift in Sources */,
@@ -1023,6 +1038,7 @@
 				8F38B7981DBE24C100D36455 /* UIActivityIndicatorView.swift in Sources */,
 				8F38B7B31DBE24C100D36455 /* RearrangableViewDelegate.swift in Sources */,
 				8F38B7AD1DBE24C100D36455 /* UIView+Hierarchy.swift in Sources */,
+				8F38B7F71DBF3BCB00D36455 /* UIImageView.swift in Sources */,
 				8F38B6971DBDFE6400D36455 /* Set.swift in Sources */,
 				8F38B6941DBDFE6400D36455 /* RangeReplaceableCollection+Optionals.swift in Sources */,
 				8F38B7CC1DBE271E00D36455 /* CGFloat.swift in Sources */,
@@ -1278,6 +1294,7 @@
 				8F38B6551DBDFE1100D36455 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F38B6561DBDFE1100D36455 /* Build configuration list for PBXNativeTarget "SwiftPlusTests" */ = {
 			isa = XCConfigurationList;
@@ -1286,6 +1303,7 @@
 				8F38B6581DBDFE1100D36455 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
